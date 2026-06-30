@@ -1,0 +1,14 @@
+# large data files — too big for GitHub (487MB)
+data/candidates.jsonl
+
+# outputs and temp files
+submission.csv
+submission_baseline.csv
+test_out.csv
+_bench.py
+_bench_out.csv
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo

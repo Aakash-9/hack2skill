@@ -1,0 +1,77 @@
+# Redrob Hackathon — Submission Metadata
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "Aakash-9"
+
+primary_contact:
+  name: "YOUR FULL NAME"          # FILL THIS
+  email: "shahvishal4187@gmail.com"
+  phone: "+91-XXXXXXXXXX"         # FILL THIS
+
+team_members:
+  - name: "YOUR FULL NAME"        # FILL THIS
+    email: "shahvishal4187@gmail.com"
+    role: "ML Engineer"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/Aakash-9/hack2skill"
+
+sandbox_link: "FILL THIS"
+# Required. Host on HuggingFace Spaces / Streamlit Cloud / Replit / Colab / Binder.
+
+reproduce_command: "python rank.py --candidates ./data/candidates.jsonl --out ./submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Windows 11 Home"
+  cpu_cores: 16
+  ram_gb: 16
+  python_version: "3.11.9"
+  os: "Windows 11 Home Single Language 10.0.26200"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Claude"
+
+ai_usage_summary: |
+  Used Claude for architecture discussion, code review, and debugging.
+  No candidate data was fed to any LLM. All ranking logic is rule-based
+  and runs fully offline with no API calls during ranking.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Rule-based ranker with six weighted scoring components: skill match (40%),
+  title and career trajectory (22%), years of experience (14%), education tier (8%),
+  location (7%), and behavioral signals (9%). Skill matching uses precompiled
+  regex patterns against JD-derived keyword sets for O(1) per-skill lookup.
+  Behavioral signals from the 23 redrob_signals fields act as a hiring-readiness
+  modifier — open_to_work_flag, recruiter_response_rate, interview_completion_rate,
+  github_activity_score, and recency. Honeypot detection flags profiles with
+  impossible signal combinations (expert skills with zero usage months, perfect
+  triple-rate candidates, career months exceeding claimed experience).
+  Parallelized across all CPU cores using ProcessPoolExecutor with bulk file read.
+  Runtime: ~3 seconds for 100K candidates on 16-core CPU.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
