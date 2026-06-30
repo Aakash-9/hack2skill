@@ -3,18 +3,20 @@
 # ============================================================================
 # Team identity
 # ============================================================================
-team_name: "Aakash-9"
+team_name: "VectorVerse"
 
 primary_contact:
-  name: "YOUR FULL NAME"          # FILL THIS
-  email: "shahvishal4187@gmail.com"
-  phone: "+91-XXXXXXXXXX"         # FILL THIS
+  name: "Aakash Sharma"          # FILL THIS
+  email: "aakashsh892@gmail.com"
+  phone: "+91-6378597991"         # FILL THIS
 
 team_members:
-  - name: "YOUR FULL NAME"        # FILL THIS
-    email: "shahvishal4187@gmail.com"
-    role: "ML Engineer"
-
+  -  name: "Aakash Sharma"
+     email: "aakashsh892@gmail.com"
+     role: "Student"
+  -  name: "Gayatri Apotikar"
+     email: "gayatri.apotikar.btech2023@sitpune.edu.in"
+     role: "Student"
 # ============================================================================
 # Code and reproducibility
 # ============================================================================
