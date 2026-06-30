@@ -22,7 +22,7 @@ team_members:
 # ============================================================================
 github_repo: "https://github.com/Aakash-9/hack2skill"
 
-sandbox_link: "https://huggingface.co/spaces/aakashhhhh4/Hack2Skill"
+sandbox_link: "https://huggingface.co/spaces/aakashhhhh4/hack2skilll"
 # Required. Host on HuggingFace Spaces / Streamlit Cloud / Replit / Colab / Binder.
 
 reproduce_command: "python rank.py --candidates ./data/candidates.jsonl --out ./submission.csv"
